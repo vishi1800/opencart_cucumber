@@ -30,7 +30,7 @@ public class steps {
 	
 
 
-	public static WebDriver driver;
+	 WebDriver driver;
      HomePage hp;
      LoginPage lp;
      MyAccountPage macc;
@@ -59,11 +59,13 @@ public class steps {
 
     @After
     public void tearDown(Scenario scenario) {
-        System.out.println("Scenario status ======>"+scenario.getStatus());
-        if(scenario.isFailed()) {
-             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png",scenario.getName());
-            }
+//        System.out.println("Scenario status ======>"+scenario.getStatus());
+//        if(scenario.isFailed()) {
+//             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(screenshot, "image/png",scenario.getName());
+//            }
+    	
+    	
        driver.quit();
     }
 
