@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -31,7 +30,7 @@ public class steps {
 	
 
 
-     WebDriver driver;
+	public static WebDriver driver;
      HomePage hp;
      LoginPage lp;
      MyAccountPage macc;
