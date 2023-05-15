@@ -3,6 +3,7 @@ package stepDefinitions;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
@@ -49,7 +50,8 @@ public class steps {
         //for logging
         logger= LogManager.getLogger(this.getClass());
         //Reading config.properties (for browser)
-        rb=ResourceBundle.getBundle("config");
+       
+        rb=ResourceBundle.getBundle("config",Locale.ENGLISH);
         br=rb.getString("browser");
       
         macc=new MyAccountPage(driver);
