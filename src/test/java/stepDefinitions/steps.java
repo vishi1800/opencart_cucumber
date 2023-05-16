@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.osgi.BundleContextSelector;
 import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -50,8 +51,8 @@ public class steps {
         //for logging
         logger= LogManager.getLogger(this.getClass());
         //Reading config.properties (for browser)
-       
-        rb=ResourceBundle.getBundle("config",Locale.ENGLISH);
+       String  Bund = "C:\\Selenium\\opencart_cucumber_framework\\opencart_cucumber_framework\\resources\\config.properties";
+        rb=ResourceBundle.getBundle(Bund,Locale.ENGLISH);
         br=rb.getString("browser");
       
         macc=new MyAccountPage(driver);
@@ -68,7 +69,7 @@ public class steps {
 //            }
     	
     	
-       driver.quit();
+      // driver.quit();
     }
 
     @Given("User Launch browser")
