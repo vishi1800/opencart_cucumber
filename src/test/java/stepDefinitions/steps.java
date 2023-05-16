@@ -41,7 +41,7 @@ public class steps {
 
      public Logger logger; //for logging
      public ResourceBundle rb; // for reading properties file
-     public String br; //to store browser name
+     public String br= "chrome"; //to store browser name
 
 
 
@@ -51,9 +51,10 @@ public class steps {
         //for logging
         logger= LogManager.getLogger(this.getClass());
         //Reading config.properties (for browser)
-       String  Bund = "C:\\Selenium\\opencart_cucumber_framework\\opencart_cucumber_framework\\resources\\config.properties";
-        rb=ResourceBundle.getBundle(Bund,Locale.ENGLISH);
-        br=rb.getString("browser");
+      //  String  Bund = "C:\\Selenium\\opencart_cucumber_framework\\opencart_cucumber_framework\\resources\\config.properties";
+      //  rb=ResourceBundle.getBundle(Bund,Locale.ENGLISH);
+      
+       // br=rb.getString("browser");
       
         macc=new MyAccountPage(driver);
                 
